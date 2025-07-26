@@ -26,7 +26,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          cd dist/akib
+          cd dist/akib/browsers
           git init
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
