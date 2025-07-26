@@ -33,6 +33,6 @@ jobs:
           git add .
           git commit -m "🚀 Deploy from GitHub Actions"
           git branch -M gh-pages
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
           git push --force origin gh-pages
 
