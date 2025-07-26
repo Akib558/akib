@@ -26,15 +26,14 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          cd dist/akib
+          cd dist/akib/browser
           git init
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          echo "node_modules" > .gitignore
-          echo ".github" >> .gitignore
           echo ".nojekyll" > .nojekyll
           git add .
           git commit -m "🚀 Deploy from GitHub Actions"
           git branch -M gh-pages
           git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
           git push --force origin gh-pages
+
